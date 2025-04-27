@@ -2,21 +2,14 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      # If needed, specify runtime versions
     commands:
-      - echo "Installing Apache Web Server..."
-      - sudo apt-get update -y
-      - sudo apt-get install apache2 -y
+      - echo "Nothing to install for HTML site."
+
   build:
     commands:
-      - echo "Building HTML site (no actual build needed)."
-  post_build:
-    commands:
-      - echo "Deploying to Apache default directory..."
-      - sudo rm -rf /var/www/html/*
-      - sudo cp -r * /var/www/html/
-      - sudo systemctl restart apache2
+      - echo "Nothing to build for HTML site."
+
 artifacts:
   files:
-    - '**/*'
+    - index.html
+
